@@ -22,7 +22,7 @@ if(CATKIN_ENABLE_TESTING)
     add_subdirectory(test)
 endif()
 
-install(PROGRAMS
+catkin_install_python(PROGRAMS
    scripts/playbuiltin.py
    scripts/play.py
    scripts/say.py
@@ -30,7 +30,7 @@ install(PROGRAMS
    scripts/soundplay_node.py
    scripts/test.py
    scripts/test_actionlib_client.py
-      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 install(FILES
    soundplay_node.launch
